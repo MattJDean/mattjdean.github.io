@@ -133,14 +133,10 @@ footer {
 
 @media (max-width: 600px) {
     .terminal {
-        width: 100%;
-        max-width: 95%;
+        width: calc(100% - 20px); /* Adjust width for smaller screens */
+        max-width: 100%;
         box-shadow: none;
         border-radius: 0;
-    }
-
-    .terminal-header {
-        padding: 5px;
     }
 
     .terminal-body {
