@@ -1,107 +1,45 @@
-document.addEventListener("DOMContentLoaded", function() {
-    particlesJS("particles-js", {
-        "particles": {
-            "number": {
-                "value": 80,
-                "density": {
-                    "enable": true,
-                    "value_area": 800
-                }
-            },
-            "color": {
-                "value": "#000000"
-            },
-            "shape": {
-                "type": "circle",
-                "stroke": {
-                    "width": 0,
-                    "color": "#000000"
-                },
-                "polygon": {
-                    "nb_sides": 5
-                }
-            },
-            "opacity": {
-                "value": 0.5,
-                "random": false,
-                "anim": {
-                    "enable": false,
-                    "speed": 1,
-                    "opacity_min": 0.1,
-                    "sync": false
-                }
-            },
-            "size": {
-                "value": 3,
-                "random": true,
-                "anim": {
-                    "enable": false,
-                    "speed": 40,
-                    "size_min": 0.1,
-                    "sync": false
-                }
-            },
-            "line_linked": {
-                "enable": true,
-                "distance": 150,
-                "color": "#000000",
-                "opacity": 0.4,
-                "width": 1
-            },
-            "move": {
-                "enable": true,
-                "speed": 6,
-                "direction": "none",
-                "random": false,
-                "straight": false,
-                "out_mode": "out",
-                "bounce": false,
-                "attract": {
-                    "enable": false,
-                    "rotateX": 600,
-                    "rotateY": 1200
-                }
-            }
-        },
-        "interactivity": {
-            "detect_on": "canvas",
-            "events": {
-                "onhover": {
-                    "enable": true,
-                    "mode": "repulse"
-                },
-                "onclick": {
-                    "enable": true,
-                    "mode": "push"
-                },
-                "resize": true
-            },
-            "modes": {
-                "grab": {
-                    "distance": 400,
-                    "line_linked": {
-                        "opacity": 1
-                    }
-                },
-                "bubble": {
-                    "distance": 400,
-                    "size": 40,
-                    "duration": 2,
-                    "opacity": 8,
-                    "speed": 3
-                },
-                "repulse": {
-                    "distance": 200,
-                    "duration": 0.4
-                },
-                "push": {
-                    "particles_nb": 4
-                },
-                "remove": {
-                    "particles_nb": 2
-                }
-            }
-        },
-        "retina_detect": true
-    });
+document.addEventListener("DOMContentLoaded", function () {
+  const command = "whois mattdean.tech";
+  const response =
+    "\n>Matt Dean \n>Trainee Web Developer \n<a href='https://www.netmatters.co.uktrain-for-a-career-in-tech' target='_blank'>>Netmatters Scion Coalition Scheme</a> \n<span class='highlight'>>Content coming soon...</span>";
+  const typedtext = document.getElementById("typedtext");
+  let index = 0;
+
+  function typeText() {
+    if (index < command.length) {
+      typedtext.innerHTML += command.charAt(index);
+      index++;
+      setTimeout(typeText, 100);
+    } else {
+      setTimeout(executeCommand, 500);
+    }
+  }
+
+  function executeCommand() {
+    typedtext.innerHTML += "<br>" + response.replace(/\n/g, "<br>");
+    removeCursor();
+    setTimeout(() => {
+      index = 0;
+      typedtext.innerHTML += "<br><br>$ ";
+      addCursor();
+    }, 2000);
+  }
+
+  function removeCursor() {
+    const cursor = document.querySelector(".cursor");
+    if (cursor) {
+      cursor.remove();
+    }
+  }
+
+  function addCursor() {
+    removeCursor(); // Ensure no duplicate cursors
+    const cursor = document.createElement("span");
+    cursor.className = "cursor";
+    cursor.textContent = "_";
+    typedtext.appendChild(cursor);
+  }
+
+  addCursor();
+  setTimeout(typeText, 1000);
 });
