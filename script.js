@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const command = "whois mattdean.tech";
   const response =
-    "\n>Matt Dean \n>Trainee Web Developer \n<a href='https://www.netmatters.co.uk/train-for-a-career-in-tech' target='_blank'>>Netmatters Scion Coalition Scheme</a> \n<span class='highlight'>>Content coming soon...</span>";
+    "\nMatt Dean \nTrainee Web Developer \n<a href='https://www.netmatters.co.uk' target='_blank'>Netmatters Scion Coalition Scheme</a> \n<span class='highlight'>Content coming soon...</span>";
   const typedtext = document.getElementById("typedtext");
   let index = 0;
 
@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       index = 0;
       typedtext.innerHTML += "<br><br>$ ";
       addCursor();
+      showContactSection(); // Show contact section after command execution
     }, 2000);
   }
 
@@ -38,6 +39,11 @@ document.addEventListener("DOMContentLoaded", function () {
     cursor.className = "cursor";
     cursor.textContent = "_";
     typedtext.appendChild(cursor);
+  }
+
+  function showContactSection() {
+    const contactSection = document.querySelector(".contact-me");
+    contactSection.classList.add("show");
   }
 
   addCursor();
