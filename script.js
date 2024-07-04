@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   const command = "whois mattdean.tech";
   const response =
-    "\n>Matt Dean \n>Trainee Web Developer \n<a href='https://www.netmatters.co.uk/train-for-a-career-in-tech' class='highlight-link' target='_blank'>>SCS @ Netmatters<</a> \n\n<span class='highlight'>>Content coming soon...</span>";
+    "\n>Matt Dean \n>Trainee Web Developer \n<a href='https://www.netmatters.co.uk/train-for-a-career-in-tech' class='highlight-link' target='_blank'>>SCS @ Netmatters</a> \n\n<span class='highlight'>>Content coming soon...</span>";
   const typedtext = document.getElementById("typedtext");
   let index = 0;
 
