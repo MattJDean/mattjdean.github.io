@@ -1,19 +1,19 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @media (max-width: 600px) {
-    .terminal-body {
-        padding: 10px;
-    }
-    #typedtext {
-        font-size: 1em;
-    }
-    .contact-me a {
-        font-size: 1.5em;
-    }
+  .terminal-body {
+    padding: 10px;
+  }
+  #typedtext {
+    font-size: 1em;
+  }
+  .contact-me a {
+    font-size: 1.5em;
+  }
 }
 
 body {
@@ -30,41 +30,43 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 600px;
-    padding: 20px;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
 }
 
 /*.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-grow: 1;
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+flex-grow: 1;
 }*/
 
 .terminal {
-  width: 600px; /* Default width for larger screens */
+  width: 600px; 
   max-width: 90%;
   background-color: #1e1e1e;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin-bottom: 20px; /* Space between terminal and contact section */
+  margin-bottom: 20px; 
 }
 
 .terminal-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 10px;
   background-color: #333;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+  position: relative;
 }
 
 .buttons {
   display: flex;
-}
+  position: absolute; 
+  left: 10px; 
 
 .buttons span {
   display: inline-block;
@@ -95,7 +97,7 @@ body {
 
 .terminal-body {
   padding: 20px;
-  overflow-x: auto; /* Ensure long content can be scrolled */
+  overflow-x: auto; 
 }
 
 #typedtext {
@@ -118,7 +120,7 @@ body {
 }
 
 a {
-  color: #fff; /* Blend link color with text color */
+  color: #fff; 
   text-decoration: none;
   position: relative;
 }
@@ -163,8 +165,8 @@ footer {
   transform: translateY(20px);
   transition:
     opacity 1.5s ease,
-    transform 2s ease; /* Slower animation */
-  margin-top: 50px; /* Space above contact section */
+    transform 2s ease; 
+  margin-top: 100px; 
 }
 
 .contact-me.show {
@@ -173,14 +175,14 @@ footer {
 }
 
 .contact-me h2 {
-  margin-bottom: 10px; /* Space between header and paragraph */
+  margin-bottom: 10px; 
 }
 
 .contact-me p {
-  margin-bottom: 20px; /* Space between paragraph and icon */
+  margin-bottom: 20px; 
 }
 
 .contact-me a {
-  font-size: 2em; /* Adjust icon size */
-  margin-top: 10px; /* Space between text and icon */
+  font-size: 2em; 
+  margin-top: 10px; 
 }
