@@ -3,34 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Matt Dean, a trainee web developer under the Netmatters Scion Coalition Scheme. Learn more about my journey and connect with me.">
+    <meta name="keywords" content="Matt Dean, Web Developer, Netmatters, Scion Coalition Scheme, Web Development, HTML, CSS, JavaScript">
+    <meta name="author" content="Matt Dean">
     <title>Matt Dean | Web Developer</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <div class="terminal">
+        <div class="terminal" role="region" aria-labelledby="terminal-title">
             <div class="terminal-header">
                 <div class="buttons">
-                    <span class="red"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
+                    <span class="red" aria-hidden="true"></span>
+                    <span class="yellow" aria-hidden="true"></span>
+                    <span class="green" aria-hidden="true"></span>
                 </div>
-                <div class="title">Terminal</div>
+                <div class="title" id="terminal-title">Terminal</div>
             </div>
-            <div class="terminal-body">
-                <div id="typedtext"></div>
+            <div class="terminal-body" role="region" aria-live="polite">
+                <div id="typedtext" aria-label="Typed Text"></div>
             </div>
         </div>
 
-        <!-- Contact Me Section -->
-        <div class="contact-me">
-            <h2>Let's connect</h2>
-            <a href="https://www.linkedin.com/in/matt-dean-29263055/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        
+        <div class="contact-me" aria-labelledby="contact-me-title">
+            <h2 id="contact-me-title">Let's connect</h2>
+            <a href="https://www.linkedin.com/in/matt-dean-29263055/" target="_blank" aria-label="LinkedIn Profile"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
         </div>
     </div>
     <footer>
-        &copy; Matt Dean 2024
+        &copy; <span id="currentYear">2024</span> Matt Dean
     </footer>
     <script src="script.js"></script>
 </body>
