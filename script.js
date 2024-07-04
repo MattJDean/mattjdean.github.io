@@ -22,7 +22,7 @@ document.addEventListener("DOMContentLoaded", function () {
       index = 0;
       typedtext.innerHTML += "<br><br>$ ";
       addCursor();
-      showContactSection(); // Show contact section after command execution
+      showContactSection(); 
     }, 2000);
   }
 
@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   function addCursor() {
-    removeCursor(); // Ensure no duplicate cursors
+    removeCursor(); 
     const cursor = document.createElement("span");
     cursor.className = "cursor";
     cursor.textContent = "_";
@@ -45,6 +45,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const contactSection = document.querySelector(".contact-me");
     contactSection.classList.add("show");
   }
+
+  
+  document.getElementById("currentYear").textContent = new Date().getFullYear();
 
   addCursor();
   setTimeout(typeText, 1000);
